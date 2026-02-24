@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Auto</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+header {
+  background: black;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+.hero h1 {
+  font-size: 28px;
+}
+.search-box {
+  margin: 20px auto;
+  max-width: 400px;
+}
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+}
+.cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.car {
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+.car img {
+  width: 100%;
+  border-radius: 6px;
+}
+.price {
+  color: #00ff99;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.signup-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background: #00ff99;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.signup-form {
+  display: none;
+  padding: 20px;
+  background: #1c1c1c;
+}
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+}
+</style>
+</head>
+<body>
+
+<header>ELITE AUTO</header>
+
+<section class="hero">
+  <h1>Find Your Dream Car</h1>
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search cars...">
+  </div>
+</section>
+
+<section class="cars" id="carList">
+  <div class="car">
+    <img src="https://images.unsplash.com/photo-1616788494672-ec7ca25fdda0" alt="car">
+    <h3>Mercedes C300</h3>
+    <div class="price">$25,000</div>
+  </div>
+  <div class="car">
+    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" alt="car">
+    <h3>BMW X5</h3>
+    <div class="price">$38,000</div>
+  </div>
+  <div class="car">
+    <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c8" alt="car">
+    <h3>Audi A7</h3>
+    <div class="price">$42,000</div>
+  </div>
+  <div class="car">
+    <img src="https://images.unsplash.com/photo-1583267746897-2cf415887172" alt="car">
+    <h3>Lexus RX</h3>
+    <div class="price">$29,000</div>
+  </div>
+  <div class="car">
+    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a" alt="car">
+    <h3>Tesla Model S</h3>
+    <div class="price">$55,000</div>
+  </div>
+  <div class="car">
+    <img src="https://images.unsplash.com/photo-1597007030739-6d2e4c4e6e75" alt="car">
+    <h3>Range Rover Sport</h3>
+    <div class="price">$60,000</div>
+  </div>
+</section>
+
+<button class="signup-btn" onclick="showSignup()">Looking for something else? Sign Up</button>
+
+<section class="signup-form" id="signupForm">
+  <h2>Create Account</h2>
+  <input type="text" placeholder="Full Name">
+  <input type="email" placeholder="Email">
+  <input type="tel" placeholder="Phone Number">
+  <input type="password" placeholder="Password">
+  <button class="signup-btn">Register</button>
+</section>
+
+<script>
+function showSignup() {
+  document.getElementById("signupForm").style.display = "block";
+}
+</script>
+
+</body>
+  </html>
