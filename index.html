@@ -4,143 +4,232 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Auto</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
 }
-header {
-  background: black;
-  padding: 15px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 2px;
+
+body{
+  background:#f5f2ef;
+  color:#111;
 }
-.hero {
-  text-align: center;
-  padding: 40px 20px;
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  margin:60px 0 40px;
 }
-.hero h1 {
-  font-size: 28px;
+
+.section-title span{
+  background:#ffe5e5;
+  color:#c1121f;
+  padding:6px 18px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:600;
 }
-.search-box {
-  margin: 20px auto;
-  max-width: 400px;
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  margin-top:15px;
 }
-.search-box input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
+
+/* CONTACT CARDS */
+.contact-container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-bottom:60px;
 }
-.cars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-  padding: 20px;
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:28px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  transition:0.3s;
 }
-.car {
-  background: #1c1c1c;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
+
+.card:hover{
+  transform:translateY(-5px);
 }
-.car img {
-  width: 100%;
-  border-radius: 6px;
+
+.icon-box{
+  background:#ffe5e5;
+  width:60px;
+  height:60px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  color:#c1121f;
 }
-.price {
-  color: #00ff99;
-  font-weight: bold;
-  margin-top: 5px;
+
+.card h3{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  margin-bottom:8px;
 }
-.signup-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 12px 20px;
-  background: #00ff99;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
+
+.card p{
+  color:#555;
+  line-height:1.6;
 }
-.signup-form {
-  display: none;
-  padding: 20px;
-  background: #1c1c1c;
+
+.card a{
+  color:#c1121f;
+  text-decoration:none;
+  font-weight:600;
 }
-.signup-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  border: none;
+
+/* DARK SHOWROOM SECTION */
+.showroom{
+  width:90%;
+  max-width:1100px;
+  margin:0 auto 80px;
+  background:linear-gradient(135deg,#111,#1a1a1a);
+  color:white;
+  padding:50px;
+  border-radius:30px;
+  text-align:center;
+}
+
+.showroom h2{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.showroom p{
+  color:#ddd;
+  margin-bottom:25px;
+}
+
+.showroom a{
+  display:inline-block;
+  padding:14px 28px;
+  background:white;
+  color:#111;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.showroom a:hover{
+  background:#c1121f;
+  color:white;
+}
+
+/* FOOTER */
+footer{
+  background:linear-gradient(135deg,#111,#1a1a1a);
+  color:#aaa;
+  padding:50px 0;
+  text-align:center;
+}
+
+footer h3{
+  font-family:'Playfair Display',serif;
+  color:white;
+  margin-bottom:15px;
+}
+
+footer p{
+  font-size:14px;
 }
 </style>
 </head>
+
 <body>
 
-<header>ELITE AUTO</header>
+<!-- CONTACT SECTION -->
+<div class="section-title">
+  <span>Get In Touch</span>
+  <h2>Contact Us</h2>
+</div>
 
-<section class="hero">
-  <h1>Find Your Dream Car</h1>
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Search cars...">
-  </div>
-</section>
+<div class="contact-container">
 
-<section class="cars" id="carList">
-  <div class="car">
-    <img src="https://images.unsplash.com/photo-1616788494672-ec7ca25fdda0" alt="car">
-    <h3>Mercedes C300</h3>
-    <div class="price">$25,000</div>
+  <!-- VISIT -->
+  <div class="card">
+    <div class="icon-box">📍</div>
+    <div>
+      <h3>Visit Us</h3>
+      <p>
+        123 Elite Auto Drive<br>
+        Los Angeles, CA 90001
+      </p>
+    </div>
   </div>
-  <div class="car">
-    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" alt="car">
-    <h3>BMW X5</h3>
-    <div class="price">$38,000</div>
-  </div>
-  <div class="car">
-    <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c8" alt="car">
-    <h3>Audi A7</h3>
-    <div class="price">$42,000</div>
-  </div>
-  <div class="car">
-    <img src="https://images.unsplash.com/photo-1583267746897-2cf415887172" alt="car">
-    <h3>Lexus RX</h3>
-    <div class="price">$29,000</div>
-  </div>
-  <div class="car">
-    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a" alt="car">
-    <h3>Tesla Model S</h3>
-    <div class="price">$55,000</div>
-  </div>
-  <div class="car">
-    <img src="https://images.unsplash.com/photo-1597007030739-6d2e4c4e6e75" alt="car">
-    <h3>Range Rover Sport</h3>
-    <div class="price">$60,000</div>
-  </div>
-</section>
 
-<button class="signup-btn" onclick="showSignup()">Looking for something else? Sign Up</button>
+  <!-- TELEGRAM -->
+  <div class="card">
+    <div class="icon-box">✈️</div>
+    <div>
+      <h3>Contact Us on Telegram</h3>
+      <p>
+        <a href="https://t.me/eliteauto100" target="_blank">
+          t.me/eliteauto100
+        </a>
+      </p>
+    </div>
+  </div>
 
-<section class="signup-form" id="signupForm">
-  <h2>Create Account</h2>
-  <input type="text" placeholder="Full Name">
-  <input type="email" placeholder="Email">
-  <input type="tel" placeholder="Phone Number">
-  <input type="password" placeholder="Password">
-  <button class="signup-btn">Register</button>
-</section>
+  <!-- EMAIL -->
+  <div class="card">
+    <div class="icon-box">✉️</div>
+    <div>
+      <h3>Email Us</h3>
+      <p>
+        eliteauto100@yahoo.com
+      </p>
+    </div>
+  </div>
 
-<script>
-function showSignup() {
-  document.getElementById("signupForm").style.display = "block";
-}
-</script>
+  <!-- HOURS -->
+  <div class="card">
+    <div class="icon-box">⏰</div>
+    <div>
+      <h3>Working Hours</h3>
+      <p>
+        Mon – Sat: 9AM – 8PM<br>
+        Sunday: 10AM – 6PM
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- SHOWROOM CTA -->
+<div class="showroom">
+  <h2>Visit Our Premium Showroom</h2>
+  <p>Experience luxury and performance up close at Elite Auto.</p>
+  <a href="https://t.me/eliteauto100" target="_blank">
+    Chat on Telegram
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <h3>Elite Auto</h3>
+  <p>© 2026 Elite Auto. All rights reserved.</p>
+</footer>
 
 </body>
-  </html>
+</html>
